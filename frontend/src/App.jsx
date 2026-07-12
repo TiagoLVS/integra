@@ -252,6 +252,7 @@ export default function App() {
           minicursos={minicursos}
           minhasMcInscricoes={minhasMcInscricoes}
           cancelarInscricaoMinicurso={cancelarInscricaoMinicurso}
+           meuAssento={minhaInscricaoEvento?.assento}
         />
       )}
 

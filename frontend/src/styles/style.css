@@ -986,3 +986,123 @@ input:focus-visible {
   margin-top: auto;
   padding-top: 1rem;
 }
+.inscricoes-body {
+  background: #EDF1F6;
+}
+
+.inscricoes-profile-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 640px) {
+  .inscricoes-profile-grid { grid-template-columns: 1fr; }
+}
+
+.inscricoes-profile-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(4,4,74,0.08);
+  border-radius: 14px;
+  padding: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 16px rgba(4,4,74,0.05);
+}
+.inscricoes-avatar {
+  width: 54px; height: 54px; border-radius: 50%;
+  background: var(--navy-deep); border: 2px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 700; font-size: 18px;
+  color: #FFFFFF; flex-shrink: 0;
+}
+.inscricoes-profile-name {
+  font-family: var(--font-display); font-weight: 700; font-size: 17px;
+  margin: 0; color: var(--navy-deep);
+}
+.inscricoes-profile-email {
+  font-family: var(--font-body); font-size: 12px; color: var(--muted); margin: 3px 0 0;
+}
+.inscricoes-profile-badges { display: flex; gap: 4px; margin-top: 8px; flex-wrap: wrap; }
+.inscricoes-badge {
+  font-family: var(--font-body); font-size: 10px; font-weight: 600;
+  letter-spacing: .04em; text-transform: uppercase;
+  background: rgba(79,121,101,0.12); color: var(--success-deep);
+  padding: 3px 8px; border-radius: 99px;
+}
+
+.inscricoes-seat-card {
+  background: var(--navy-deep);
+  border-radius: 14px;
+  padding: 1.2rem 1.4rem;
+  position: relative;
+  overflow: hidden;
+  display: flex; flex-direction: column; justify-content: center;
+  box-shadow: 0 8px 24px rgba(4,4,74,0.18);
+}
+.inscricoes-seat-card::before {
+  content: '';
+  position: absolute; top: -20px; right: -20px;
+  width: 90px; height: 90px; border-radius: 50%;
+  background: rgba(201,162,39,0.12);
+}
+.inscricoes-seat-label {
+  font-family: var(--font-body); font-size: 10px; color: var(--gold);
+  text-transform: uppercase; letter-spacing: .12em;
+  margin: 0 0 4px; font-weight: 700; position: relative;
+}
+.inscricoes-seat-value {
+  font-family: var(--font-display); font-size: 30px; font-weight: 700;
+  color: #FFFFFF; margin: 0; position: relative;
+}
+.inscricoes-seat-sub {
+  font-family: var(--font-body); font-size: 11px; color: rgba(255,255,255,0.6);
+  margin: 2px 0 0; position: relative;
+}
+
+.inscricoes-divider {
+  display: flex; align-items: center; gap: 10px; margin: 0 0 14px;
+}
+.inscricoes-divider span {
+  font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--navy-deep);
+}
+.inscricoes-divider .line {
+  flex: 1; height: 1px; background: rgba(201,162,39,0.35);
+}
+
+.inscricoes-mc-item {
+  background: #FFFFFF;
+  border: 1px solid rgba(4,4,74,0.08);
+  border-left: 3px solid var(--gold);
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  box-shadow: 0 2px 10px rgba(4,4,74,0.04);
+  margin-bottom: .6rem;
+}
+.inscricoes-mc-item.concluido { border-left-color: var(--success); }
+.inscricoes-mc-item .titulo {
+  font-family: var(--font-display); font-weight: 700; font-size: 15px;
+  margin: 0; color: var(--navy-deep);
+}
+.inscricoes-mc-item .meta {
+  font-family: var(--font-body); font-size: 12px; color: var(--muted); margin: 3px 0 0;
+}
+.inscricoes-mc-item .meta .status-concluido { color: var(--success-deep); font-weight: 600; }
+
+.btn-mc-primary {
+  font-family: var(--font-body); font-size: 12px; font-weight: 600;
+  padding: 7px 14px; background: var(--navy-deep); color: #FFFFFF;
+  border: none; border-radius: 8px; cursor: pointer;
+}
+.btn-mc-ghost {
+  font-family: var(--font-body); font-size: 12px; font-weight: 600;
+  padding: 7px 14px; background: transparent; color: var(--navy-deep);
+  border: 1px solid rgba(4,4,74,0.25); border-radius: 8px; cursor: pointer;
+}
+.btn-mc-danger {
+  font-family: var(--font-body); font-size: 12px; font-weight: 600;
+  padding: 7px 14px; background: transparent; color: var(--danger);
+  border: 1px solid rgba(166,72,74,0.3); border-radius: 8px; cursor: pointer;
+}
