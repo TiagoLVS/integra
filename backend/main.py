@@ -1,3 +1,5 @@
+import os
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.database import Base, engine
@@ -11,9 +13,14 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Íntegra: Humano por Inteiro - API")
 
+frontend_url = os.getenv("FRONTEND_URL", "http://localhost:5173")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # em produção, trocar "*" pelo endereço real do front
+    allow_origins=[
+        frontend_url,
+        "http://localhost:5173",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
