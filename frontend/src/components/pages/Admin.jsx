@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Dashboard from './Dashboard.jsx';
+import Dashboard from './dashboard.jsx';
 import {
   listarParticipantes,
   criarMinicursoAdmin,
